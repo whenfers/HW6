@@ -68,7 +68,8 @@
                 <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="RecipeDetail.aspx?ID={0}" Text="Select" />
             </Columns>
         </asp:GridView>
-    
+    <br />
+    <br />
     </div>
     </div>
         <br />

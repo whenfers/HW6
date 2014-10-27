@@ -25,9 +25,8 @@
                 About Us</a>&nbsp; |&nbsp; <a href="Contact.aspx" style="color: #696969">
                 Contact</a>
                 </div>
-            <br />        
+                  
         </div>
-       <br />
          
         <div>
     
@@ -61,21 +60,33 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <asp:DetailsView Class="DetailGrid" ID="DV_NewRecipe" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="Sql_NewRecipe" DefaultMode="Insert" Height="50px" Width="316px">
+        <asp:DetailsView Class="DetailGrid" 
+                         FieldHeaderStyle-CssClass ="FieldHeader"
+                         CommandRowStyle-CssClass ="Command"
+                         ID="DV_NewRecipe" 
+                         runat="server" 
+                         AutoGenerateRows="False" 
+                         DataKeyNames="ID" 
+                         DataSourceID="Sql_NewRecipe" 
+                         DefaultMode="Insert" >
+<CommandRowStyle CssClass="Command"></CommandRowStyle>
+
+<FieldHeaderStyle CssClass="FieldHeader"></FieldHeaderStyle>
             <Fields>
-                <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe Name" SortExpression="Recipe_Name" />
-                <asp:BoundField DataField="Submitted_By" HeaderText="Submitted By" SortExpression="Submitted_By" />
-                <asp:BoundField DataField="Ingredient_#1" HeaderText="Ingredient #1" SortExpression="Ingredient_#1" />
-                <asp:BoundField DataField="Ingredient_#2" HeaderText="Ingredient #2" SortExpression="Ingredient_#2" />
-                <asp:BoundField DataField="Ingredient_#3" HeaderText="Ingredient #3" SortExpression="Ingredient_#3" />
-                <asp:BoundField DataField="Ingredient_#4" HeaderText="Ingredient #4" SortExpression="Ingredient_#4" />
-                <asp:BoundField DataField="Ingredient_#5" HeaderText="Ingredient #5" SortExpression="Ingredient_#5" />
+                <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
+                <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" SortExpression="Recipe_Name" />
+                <asp:BoundField DataField="Submitted_By" HeaderText="Submitted_By" SortExpression="Submitted_By" />
+                <asp:BoundField DataField="Ingredient_#1" HeaderText="Ingredient_#1" SortExpression="Ingredient_#1" />
+                <asp:BoundField DataField="Ingredient_#2" HeaderText="Ingredient_#2" SortExpression="Ingredient_#2" />
+                <asp:BoundField DataField="Ingredient_#3" HeaderText="Ingredient_#3" SortExpression="Ingredient_#3" />
+                <asp:BoundField DataField="Ingredient_#4" HeaderText="Ingredient_#4" SortExpression="Ingredient_#4" />
+                <asp:BoundField DataField="Ingredient_#5" HeaderText="Ingredient_#5" SortExpression="Ingredient_#5" />
                 <asp:BoundField DataField="Preparation" HeaderText="Preparation" SortExpression="Preparation" />
                 <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-    
+    <br />  <br />  
     </div>
         <br />
         <div style= "text-align: center; font-size: small; color: #696969; bottom: 3px;" >&#169 2014 Software Development & Design<br />

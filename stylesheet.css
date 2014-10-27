@@ -1,13 +1,13 @@
-﻿body { background-color: #D2B48C;
-}
+﻿body { background-color: #D2B48C;}
 
 .deletedRecipe
 {color:red; 
  font-style:italic;}
 
-.defaultGrid tr th{
-    background-color: #FFFF99;}
-
+.defaultGrid td {border: solid 1px #FFFFFF; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 15px; text-align: center; }
+.defaultGrid td a {color:#FFFFFF; text-decoration:underline;}
+.defaultGrid th{background-color: #FFFF99;}
+.defaultGrid th a {color:#696969; text-decoration:none;}
 .defaultGrid {
     border: 2px solid #FFFFFF;
     width: 30%;
@@ -20,15 +20,17 @@
     text-align: center;
 }
 
+.DetailGrid .FieldHeader {color:#696969; background-color: #FFFF99; font-weight:bold;}
+.DetailGrid .Command {background-color: #FFFF99}
+.DetailGrid .Command td {text-align:center}
+.DetailGrid .Command a {color:#696969; text-decoration:underline; font-weight:bold;}
 .DetailGrid {
+    color: #FFFFFF;
     border: 2px solid #FFFFFF;
-    width: 30%;
-    margin-left: 680px;
+    margin-left: 660px;
     margin-right: 500px;
     background-color: #F08080;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    text-align: center;
+    height:350px;
+    width:350px
 }
        
