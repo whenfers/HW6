@@ -46,6 +46,7 @@
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" SortExpression="Recipe_Name" />
                 <asp:BoundField DataField="Submitted_By" HeaderText="Submitted_By" SortExpression="Submitted_By" />
+                <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="RecipeDetail.aspx?ID={0}" Text="Select" />
             </Columns>
         </asp:GridView>
     
