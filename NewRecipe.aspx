@@ -5,10 +5,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
+    
+            <div style = "text-align:center; font-size:xx-large; font-weight:bold;">
+                <br />
+                Wicked Easy Recipes</div>
+           <div style ="text-align :center; font-size: large;" >
+                Using 5 Ingedients or Less!
+            </div><br />
+            <br />
+                <div style="text-align:center">
+                <a href="Default.aspx" style="color: #696969">
+                Home</a>&nbsp; |&nbsp; <a href="NewRecipe.aspx" style="color: #696969">
+                New Recipe</a>&nbsp; |&nbsp; <a href="AboutUs.aspx" style="color: #696969">
+                About Us</a>&nbsp; |&nbsp; <a href="Contact.aspx" style="color: #696969">
+                Contact</a>
+                </div>
+            <br />        
+        </div>
+       <br />
+         
+        <div>
     
         <asp:SqlDataSource ID="Sql_NewRecipe" runat="server" ConnectionString="<%$ ConnectionStrings:db_stateFacts %>" DeleteCommand="DELETE FROM [hwang44_HW6_Recipe] WHERE [ID] = @ID" InsertCommand="INSERT INTO [hwang44_HW6_Recipe] ([Recipe_Name], [Submitted_By], [Ingredient_#1], [Ingredient_#2], [Ingredient_#3], [Ingredient_#4], [Ingredient_#5], [Preparation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @column1, @column2, @column3, @column4, @column5, @Preparation, @Notes)" SelectCommand="SELECT * FROM [hwang44_HW6_Recipe]" UpdateCommand="UPDATE [hwang44_HW6_Recipe] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient_#1] = @column1, [Ingredient_#2] = @column2, [Ingredient_#3] = @column3, [Ingredient_#4] = @column4, [Ingredient_#5] = @column5, [Preparation] = @Preparation, [Notes] = @Notes WHERE [ID] = @ID">
             <DeleteParameters>
@@ -40,7 +61,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <asp:DetailsView ID="DV_NewRecipe" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="Sql_NewRecipe" DefaultMode="Insert" Height="50px" Width="316px">
+        <asp:DetailsView Class="DetailGrid" ID="DV_NewRecipe" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="Sql_NewRecipe" DefaultMode="Insert" Height="50px" Width="316px">
             <Fields>
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe Name" SortExpression="Recipe_Name" />
                 <asp:BoundField DataField="Submitted_By" HeaderText="Submitted By" SortExpression="Submitted_By" />
@@ -55,6 +76,9 @@
             </Fields>
         </asp:DetailsView>
     
+    </div>
+        <br />
+        <div style= "text-align: center; font-size: small; color: #696969; bottom: 3px;" >&#169 2014 Software Development & Design<br />
     </div>
     </form>
 </body>
